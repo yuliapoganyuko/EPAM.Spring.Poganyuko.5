@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1LogicTests", "Task1Log
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1LogicNUnitTests", "Task1LogicNUnitTests\Task1LogicNUnitTests.csproj", "{A412DBDE-2FE2-4B68-A1B0-F835D8D629EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2LogicTests", "Task2LogicTests\Task2LogicTests.csproj", "{028A2676-E0D5-4DB1-A5DC-59D47C71F96C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2LogicNUnitTests", "Task2LogicNUnitTests\Task2LogicNUnitTests.csproj", "{2761D271-4C7D-49A1-B7AE-44F74A818CF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{A412DBDE-2FE2-4B68-A1B0-F835D8D629EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A412DBDE-2FE2-4B68-A1B0-F835D8D629EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A412DBDE-2FE2-4B68-A1B0-F835D8D629EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028A2676-E0D5-4DB1-A5DC-59D47C71F96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028A2676-E0D5-4DB1-A5DC-59D47C71F96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028A2676-E0D5-4DB1-A5DC-59D47C71F96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028A2676-E0D5-4DB1-A5DC-59D47C71F96C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2761D271-4C7D-49A1-B7AE-44F74A818CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2761D271-4C7D-49A1-B7AE-44F74A818CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2761D271-4C7D-49A1-B7AE-44F74A818CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2761D271-4C7D-49A1-B7AE-44F74A818CF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,9 +13,9 @@ namespace Task2Logic
         /// <summary>
         /// Counts a greatest common divisor for the pair of numbers using Euclid's algorithm.
         /// </summary>
-        /// <param name="a">First number</param>
-        /// <param name="b">Second number</param>
-        /// <returns>The object of Result class consisting of fields with greatest common divisor and elapsed time</returns>
+        /// <param name="a"> First number</param>
+        /// <param name="b"> Second number</param>
+        /// <returns> Greatest common divisor</returns>
         public static int GetGcd(int a, int b)
         {
             if (a == 0 && b == 0)
@@ -29,27 +29,28 @@ namespace Task2Logic
         /// <summary>
         /// Counts a greatest common divisor for the pair of numbers using Euclid's algorithm.
         /// </summary>
-        /// <param name="a">First number</param>
-        /// <param name="b">Second number</param>
-        /// <returns>The object of Result class consisting of fields with greatest common divisor and elapsed time</returns>
-        public static int GetGcd(int a, int b, out TimeSpan time)
+        /// <param name="a"> First number</param>
+        /// <param name="b"> Second number</param>
+        /// <param name="milliseconds"> Out argument consisting of elapsed time in milliseconds</param>
+        /// <returns> Greatest common divisor</returns>
+        public static int GetGcd(int a, int b, out double milliseconds)
         {
             if (a == 0 && b == 0)
                 throw new ArgumentException();
 
             Stopwatch timer = StartTimer();
             int gcd = GetEuclidGcd(Math.Abs(a), Math.Abs(b));
-            time = StopTimer(timer);
+            milliseconds = StopTimer(timer);
             return gcd;
         }
 
         /// <summary>
         /// Counts a greatest common divisor for 3 and more numbers using Euclid's algorithm.
         /// </summary>
-        /// <param name="a">First number</param>
-        /// <param name="b">Second number</param>
-        /// <param name="array">Other numbers</param>
-        /// <returns>The object of Result class consisting of fields with greatest common divisor and elapsed time</returns>
+        /// <param name="a"> First number</param>
+        /// <param name="b"> Second number</param>
+        /// <param name="array"> Other numbers</param>
+        /// <returns> Greatest common divisor</returns>
         public static int GetGcd(int a, int b, params int[] array)
         {
             if (array == null)
@@ -70,11 +71,12 @@ namespace Task2Logic
         /// <summary>
         /// Counts a greatest common divisor for 3 and more numbers using Euclid's algorithm.
         /// </summary>
-        /// <param name="a">First number</param>
-        /// <param name="b">Second number</param>
-        /// <param name="array">Other numbers</param>
-        /// <returns>The object of Result class consisting of fields with greatest common divisor and elapsed time</returns>
-        public static int GetGcd(out TimeSpan time, int a, int b, params int[] array)
+        /// <param name="milliseconds"> Out argument consisting of elapsed time in milliseconds</param>
+        /// <param name="a"> First number</param>
+        /// <param name="b"> Second number</param>
+        /// <param name="array"> Other numbers</param>
+        /// <returns> Greatest common divisor</returns>
+        public static int GetGcd(out double milliseconds, int a, int b, params int[] array)
         {
             if (array == null)
                 throw new ArgumentNullException();
@@ -87,16 +89,16 @@ namespace Task2Logic
                 throw new ArgumentException();
             Stopwatch timer = StartTimer();
             int gcd = GetEuclidGcd(a, b, array);
-            time = StopTimer(timer);
+            milliseconds = StopTimer(timer);
             return gcd;
         }
 
         /// <summary>
         /// Counts a greatest common divisor for the pair of numbers using binary algorithm.
         /// </summary>
-        /// <param name="a">First number</param>
-        /// <param name="b">Second number</param>
-        /// <returns>The object of Result class consisting of fields with greatest common divisor and elapsed time</returns>
+        /// <param name="a"> First number</param>
+        /// <param name="b"> Second number</param>
+        /// <returns> Greatest common divisor</returns>
         public static int GetBinaryGcd(int a, int b)
         {
             if (a == 0 && b == 0)
@@ -110,17 +112,18 @@ namespace Task2Logic
         /// <summary>
         /// Counts a greatest common divisor for the pair of numbers using binary algorithm.
         /// </summary>
-        /// <param name="a">First number</param>
-        /// <param name="b">Second number</param>
-        /// <returns>The object of Result class consisting of fields with greatest common divisor and elapsed time</returns>
-        public static int GetBinaryGcd(int a, int b, out TimeSpan time)
+        /// <param name="a"> First number</param>
+        /// <param name="b"> Second number</param>
+        /// <param name="milliseconds"> Out argument consisting of elapsed time in milliseconds</param>
+        /// <returns> Greatest common divisor</returns>
+        public static int GetBinaryGcd(int a, int b, out double milliseconds)
         {
             if (a == 0 && b == 0)
                 throw new ArgumentException();
 
             Stopwatch timer = StartTimer();
             int gcd = GetGcdByBinaryAlgorithm(Math.Abs(a), Math.Abs(b));
-            time = StopTimer(timer);
+            milliseconds = StopTimer(timer);
 
             return gcd;
         }
@@ -131,7 +134,7 @@ namespace Task2Logic
         /// <param name="a">First number</param>
         /// <param name="b">Second number</param>
         /// <param name="array">Other numbers</param>
-        /// <returns>The object of Result class consisting of fields with greatest common divisor and elapsed time</returns>
+        /// <returns> Greatest common divisor</returns>
         public static int GetBinaryGcd(int a, int b, params int[] array)
         {
             if (array == null)
@@ -152,11 +155,12 @@ namespace Task2Logic
         /// <summary>
         /// Counts a greatest common divisor for 3 and more numbers using binary algorithm.
         /// </summary>
+        /// <param name="milliseconds"> Out argument consisting of elapsed time in milliseconds</param>
         /// <param name="a">First number</param>
         /// <param name="b">Second number</param>
         /// <param name="array">Other numbers</param>
-        /// <returns>The object of Result class consisting of fields with greatest common divisor and elapsed time</returns>
-        public static int GetBinaryGcd(out TimeSpan time, int a, int b, params int[] array)
+        /// <returns> Greatest common divisor</returns>
+        public static int GetBinaryGcd(out double milliseconds, int a, int b, params int[] array)
         {
             if (array == null)
                 throw new ArgumentNullException();
@@ -170,7 +174,7 @@ namespace Task2Logic
 
             Stopwatch timer = StartTimer();
             int gcd = GetGcdByBinaryAlgorithm(a, b, array);
-            time = StopTimer(timer);
+            milliseconds = StopTimer(timer);
             return gcd;
         }
 
@@ -260,7 +264,7 @@ namespace Task2Logic
         /// <summary>
         /// Starts time measuring.
         /// </summary>
-        /// <returns>Started Stopwatch object</returns>
+        /// <returns> Started Stopwatch object</returns>
         private static Stopwatch StartTimer()
         {
             Stopwatch timer = new Stopwatch();
@@ -271,12 +275,12 @@ namespace Task2Logic
         /// <summary>
         /// Stops time measuring.
         /// </summary>
-        /// <param name="timer">Started Stopwatch object</param>
-        /// <returns>Elapsed time</returns>
-        private static TimeSpan StopTimer(Stopwatch timer)
+        /// <param name="timer"> Started Stopwatch object</param>
+        /// <returns> Elapsed time in milliseconds</returns>
+        private static double StopTimer(Stopwatch timer)
         {
             timer.Stop();
-            return timer.Elapsed;
+            return timer.Elapsed.TotalMilliseconds;
         }
 
         #endregion
