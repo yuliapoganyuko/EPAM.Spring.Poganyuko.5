@@ -19,7 +19,7 @@ namespace Task2Logic
         public static int GetGcd(int a, int b)
         {
             if (a == 0 && b == 0)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
             
             int gcd = GetEuclidGcd(Math.Abs(a), Math.Abs(b));
 
@@ -36,7 +36,7 @@ namespace Task2Logic
         public static int GetGcd(int a, int b, out double milliseconds)
         {
             if (a == 0 && b == 0)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
 
             Stopwatch timer = StartTimer();
             int gcd = GetEuclidGcd(Math.Abs(a), Math.Abs(b));
@@ -61,7 +61,7 @@ namespace Task2Logic
             while (i < array.Length && array[i] == 0)
                 i++;
             if (i == array.Length)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
 
             int gcd = GetEuclidGcd(a, b, array);
 
@@ -86,7 +86,7 @@ namespace Task2Logic
             while (i < array.Length && array[i] == 0)
                 i++;
             if (i == array.Length)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
             Stopwatch timer = StartTimer();
             int gcd = GetEuclidGcd(a, b, array);
             milliseconds = StopTimer(timer);
@@ -102,7 +102,7 @@ namespace Task2Logic
         public static int GetBinaryGcd(int a, int b)
         {
             if (a == 0 && b == 0)
-                throw new ArgumentException(); 
+                throw new ArgumentOutOfRangeException();
 
             int gcd = GetGcdByBinaryAlgorithm(Math.Abs(a), Math.Abs(b));
             
@@ -119,7 +119,7 @@ namespace Task2Logic
         public static int GetBinaryGcd(int a, int b, out double milliseconds)
         {
             if (a == 0 && b == 0)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
 
             Stopwatch timer = StartTimer();
             int gcd = GetGcdByBinaryAlgorithm(Math.Abs(a), Math.Abs(b));
@@ -145,8 +145,8 @@ namespace Task2Logic
             while (i < array.Length && array[i] == 0)
                 i++;
             if (i == array.Length)
-                throw new ArgumentException();
-            
+                throw new ArgumentOutOfRangeException();
+
             int gcd = GetGcdByBinaryAlgorithm(a, b, array);
             
             return gcd;
@@ -170,7 +170,7 @@ namespace Task2Logic
             while (i < array.Length && array[i] == 0)
                 i++;
             if (i == array.Length)
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
 
             Stopwatch timer = StartTimer();
             int gcd = GetGcdByBinaryAlgorithm(a, b, array);

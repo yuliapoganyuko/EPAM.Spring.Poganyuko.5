@@ -27,14 +27,14 @@ namespace Task1LogicTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Root_0power()
         {
-            double actual = NewtonRoot.Root(2, 0, double.Epsilon);
+            NewtonRoot.Root(2, 0, double.Epsilon);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Root_0number()
         {
-            double actual = NewtonRoot.Root(0, 2, double.Epsilon);
+            NewtonRoot.Root(0, 2, double.Epsilon);
         }
     }
 }

@@ -7,36 +7,112 @@ namespace Task2LogicTests
     [TestClass]
     public class GcdTest
     {
+        #region GetGcd for 2 arguments
+
         [TestMethod]
-        public void GetGcd_2and3gcd_6returned()
+        public void GetGcd_Positive_Numbers()
         {
-            double expected = 6;
-            double actual = Gcd.GetGcd(2, 3);
+            int expected = 2;
+            int actual = Gcd.GetGcd(2, 8);
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void GetGcd_2_3_5_gcd_30returned()
+        public void GetGcd_Negative_Number()
         {
-            double expected = 30;
-            double actual = Gcd.GetGcd(2, 3, 5);
+            int expected = 2;
+            int actual = Gcd.GetGcd(2, -8);
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void GetBinaryGcd_2and3gcd_6returned()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GetGcd_Zero_Argument()
         {
-            double expected = 6;
-            double actual = Gcd.GetBinaryGcd(2, 3);
+            Gcd.GetGcd(2, 0);
+        }
+
+        #endregion
+
+        #region GetGcd for more than 2 arguments
+
+        [TestMethod]
+        public void GetGcd_3_Positive_Numbers()
+        {
+            int expected = 6;
+            int actual = Gcd.GetGcd(18, 6, 24);
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void GetBinaryGcd_2_3_5_gcd_30returned()
+        public void GetGcd_3_Negative_Numbers()
         {
-            double expected = 30;
-            double actual = Gcd.GetBinaryGcd(2, 3, 5);
+            int expected = 2;
+            int actual = Gcd.GetGcd(-2, -8, -4);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GetGcd_Zero_Arguments()
+        {
+            Gcd.GetGcd(2, 0, 0);
+        }
+
+        #endregion
+
+        #region GetBinaryGcd for 2 arguments
+
+        [TestMethod]
+        public void GetBinaryGcd_Positive_Numbers()
+        {
+            int expected = 2;
+            int actual = Gcd.GetBinaryGcd(2, 8);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetBinaryGcd_Negative_Number()
+        {
+            int expected = 2;
+            int actual = Gcd.GetBinaryGcd(2, -8);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GetBinaryGcd_Zero_Argument()
+        {
+            Gcd.GetBinaryGcd(2, 0);
+        }
+
+        #endregion
+
+        #region GetBinaryGcd for more than 2 arguments
+
+        [TestMethod]
+        public void GetBinaryGcd_3_Positive_Numbers()
+        {
+            int expected = 6;
+            int actual = Gcd.GetBinaryGcd(18, 6, 24);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetBinaryGcd_3_Negative_Numbers()
+        {
+            int expected = 2;
+            int actual = Gcd.GetBinaryGcd(-2, -8, -4);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GetBinaryGcd_Zero_Arguments()
+        {
+            Gcd.GetBinaryGcd(2, 0, 0);
+        }
+
+        #endregion
     }
 }
