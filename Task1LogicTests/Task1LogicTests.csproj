@@ -53,6 +53,12 @@
     <Compile Include="NewtonRootTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Task1Logic\Task1Logic.csproj">
+      <Project>{59ee89ff-0866-438b-87cd-260dc640e10e}</Project>
+      <Name>Task1Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

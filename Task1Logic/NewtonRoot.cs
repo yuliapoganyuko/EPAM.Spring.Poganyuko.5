@@ -20,9 +20,9 @@ namespace Task1Logic
         /// <param name="power">Power</param>
         /// <param name="eps">Epsilon</param>
         /// <returns>n-th root</returns>
-        public static double Root(int number, int power, double eps)
+        public static double Root(double number, int power, double eps)
         {
-            if (number <= 0 || eps <= 0 || eps > 1)
+            if (number <= 0 || eps <= 0 || eps > 1 || power == 0)
                 throw new ArgumentOutOfRangeException();
             return Sqrt(number, power, eps);
         }
@@ -38,8 +38,10 @@ namespace Task1Logic
         /// <param name="power">Power</param>
         /// <param name="eps">Epsilon</param>
         /// <returns>n-th root</returns>
-        private static double Sqrt(int number, int power, double eps)
+        private static double Sqrt(double number, int power, double eps)
         {
+            if (power < 0)
+                return 1 / Sqrt(number, -power, eps);
             double x = number / power;
             double x0 = 0;
             double df = 0;
