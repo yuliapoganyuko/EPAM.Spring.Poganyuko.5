@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1Logic", "Task1Logic\Task1Logic.csproj", "{59EE89FF-0866-438B-87CD-260DC640E10E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2Logic", "Task2Logic\Task2Logic.csproj", "{085DAD78-2FAA-4CE8-BE68-2130D169FA3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1Logic.Tests", "Task1LogicTests\Task1Logic.Tests.csproj", "{382FE2A5-6234-4D49-9A5C-E16E71934D8E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59EE89FF-0866-438B-87CD-260DC640E10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EE89FF-0866-438B-87CD-260DC640E10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EE89FF-0866-438B-87CD-260DC640E10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EE89FF-0866-438B-87CD-260DC640E10E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{085DAD78-2FAA-4CE8-BE68-2130D169FA3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{085DAD78-2FAA-4CE8-BE68-2130D169FA3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{085DAD78-2FAA-4CE8-BE68-2130D169FA3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{085DAD78-2FAA-4CE8-BE68-2130D169FA3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{382FE2A5-6234-4D49-9A5C-E16E71934D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{382FE2A5-6234-4D49-9A5C-E16E71934D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{382FE2A5-6234-4D49-9A5C-E16E71934D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{382FE2A5-6234-4D49-9A5C-E16E71934D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
