@@ -14,8 +14,7 @@ namespace Task1LogicTests
             double actual = NewtonRoot.Root(9, 2, double.Epsilon);
             Assert.AreEqual(expected, actual);
         }
-
-        //NaN!!!
+        
         [TestMethod]
         public void Root_negativepower()
         {
