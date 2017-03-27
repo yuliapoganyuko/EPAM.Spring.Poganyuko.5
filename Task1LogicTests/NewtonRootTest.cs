@@ -25,6 +25,13 @@ namespace Task1LogicTests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Root_NegativeNumber()
+        {
+            NewtonRoot.Root(-8, 3, double.Epsilon);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Root_ZeroPower()
         {
             NewtonRoot.Root(2, 0, double.Epsilon);

@@ -35,8 +35,11 @@ namespace Task3Logic
         public double Result(double value)
         {
             double result = 0;
-            for (int i = 0; i < coefficients.Length; i++)
-                result += coefficients[i] * Math.Pow(value, i);
+            checked
+            {
+                for (int i = 0; i < coefficients.Length; i++)
+                    result += coefficients[i] * Math.Pow(value, i);
+            }
             return result;
         }
 

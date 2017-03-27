@@ -12,9 +12,6 @@ namespace Task3LogicNUnitTests
             get
             {
                 yield return new TestCaseData(new Polynomial(5, 7), 2).Returns(19);
-                //yield return new TestCaseData(8, -3, double.Epsilon).Returns(Math.Pow(8, 1.0 / (-3)));
-                //yield return new TestCaseData(2, 0, double.Epsilon).Throws(typeof(ArgumentOutOfRangeException));
-                //yield return new TestCaseData(0, 2, double.Epsilon).Throws(typeof(ArgumentOutOfRangeException));
             }
         }
 
@@ -30,6 +27,7 @@ namespace Task3LogicNUnitTests
             {
                 yield return new TestCaseData(new Polynomial(2, 3), new Polynomial(-2, -3)).Returns(0);
                 yield return new TestCaseData(new Polynomial(5, 7), null).Throws(typeof(ArgumentNullException));
+
             }
         }
 
