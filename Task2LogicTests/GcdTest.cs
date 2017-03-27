@@ -29,7 +29,7 @@ namespace Task2LogicTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetGcd_Zero_Argument()
         {
-            Gcd.GetGcd(2, 0);
+            Gcd.GetGcd(0, 0);
         }
 
         #endregion
@@ -56,9 +56,15 @@ namespace Task2LogicTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetGcd_Zero_Arguments()
         {
-            Gcd.GetGcd(2, 0, 0);
+            Gcd.GetGcd(0, 0, 0, 0);
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void GetGcd_Null_Reference()
+        {
+            Gcd.GetGcd(0, 0, null);
+        }
         #endregion
 
         #region GetBinaryGcd for 2 arguments
@@ -83,7 +89,7 @@ namespace Task2LogicTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetBinaryGcd_Zero_Argument()
         {
-            Gcd.GetBinaryGcd(2, 0);
+            Gcd.GetBinaryGcd(0, 0);
         }
 
         #endregion
@@ -110,7 +116,14 @@ namespace Task2LogicTests
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetBinaryGcd_Zero_Arguments()
         {
-            Gcd.GetBinaryGcd(2, 0, 0);
+            Gcd.GetBinaryGcd(0, 0, 0, 0);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void GetBinaryGcd_Null_Reference()
+        {
+            Gcd.GetGcd(0, 0, null);
         }
 
         #endregion
