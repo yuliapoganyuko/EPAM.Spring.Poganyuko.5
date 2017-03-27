@@ -8,7 +8,7 @@ namespace Task1LogicTests
     public class NewtonRootTest
     {
         [TestMethod]
-        public void Root_2rootof9_3returned()
+        public void Root_PositiveNumberAndPower()
         {
             double expected = 3;
             double actual = NewtonRoot.Root(9, 2, double.Epsilon);
@@ -16,7 +16,7 @@ namespace Task1LogicTests
         }
         
         [TestMethod]
-        public void Root_negativepower()
+        public void Root_NegativePower()
         {
             double expected = Math.Pow(8, 1.0/(-3));
             double actual = NewtonRoot.Root(8, -3, double.Epsilon);
@@ -25,14 +25,14 @@ namespace Task1LogicTests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Root_0power()
+        public void Root_ZeroPower()
         {
             NewtonRoot.Root(2, 0, double.Epsilon);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Root_0number()
+        public void Root_ZeroNumber()
         {
             NewtonRoot.Root(0, 2, double.Epsilon);
         }
